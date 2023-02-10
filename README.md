@@ -11,6 +11,10 @@ To validate the installations use:
 
 > ng --version
 
+### VS Code Facilities
+
+- Auto Import
+
 ### Typescript Fundamentals
 
 - 'export' in the class permit it be imported as a module in other file.
@@ -27,7 +31,7 @@ To it run in localhost
 
 To add a new component in the project
 
-> ng c g component_name
+> ng g c component_name
 
 The 'c' could be replaced by 's' if you want create a service
 
