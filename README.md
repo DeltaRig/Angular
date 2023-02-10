@@ -25,7 +25,7 @@ To create a new project
 
 > ng new project_name
 
-To it run in localhost
+To it run in localhost (the default is localhost:4200)
 
 > ng serve
 
@@ -34,4 +34,7 @@ To add a new component in the project
 > ng g c component_name
 
 The 'c' could be replaced by 's' if you want create a service
+
+- In the folder '02AngularFundamentals.list.authors' do you will find my solution for: How would you use the ngFor directive to display the list of authors?
+
 
