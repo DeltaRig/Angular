@@ -37,4 +37,8 @@ The 'c' could be replaced by 's' if you want create a service
 
 - In the folder '02AngularFundamentals.list.authors' do you will find my solution for: How would you use the ngFor directive to display the list of authors?
 
+#### Other notes
 
+- *What is the difference between DOM(Document Object Model) and HTML*
+
+DOM is a model of objects that represent a structure of a docment, it's essentially a tree of objects in memory. And HTML is a markup language that we use to represent DOM in text. 
