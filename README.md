@@ -37,6 +37,18 @@ The 'c' could be replaced by 's' if you want create a service
 
 - In the folder '02AngularFundamentals.list.authors' do you will find my solution for: How would you use the ngFor directive to display the list of authors?
 
+#### Adding bootstrap
+
+> npm install boostrap --save
+
+And in your css (like styles.css)
+
+> @import "~bootstrap/dist/css/bootstrap.css"
+
+To install all project dependencies (in package.json)
+
+> npm install
+
 #### Other notes
 
 - *What is the difference between DOM(Document Object Model) and HTML*
