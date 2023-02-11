@@ -2,7 +2,12 @@
 
 ### Set up the environment
 
-Install node js, version used here was v18.14.0. And install Angular CLI with the command bellow:
+Versions used in this project:
+
+Angular CLI: 13.3.10       
+Node: 16.17.0
+
+Install node js, and install Angular CLI with the command bellow:
 
 > npm install -g @angular/cli
 
@@ -39,7 +44,9 @@ The 'c' could be replaced by 's' if you want create a service
 
 #### Adding bootstrap
 
-> npm install boostrap --save
+The command bellow should add a bootstrap folder with the path that you can import to use bootstrap items.
+
+> npm install bootstrap@5.3.0-alpha1
 
 And in your css (like styles.css)
 

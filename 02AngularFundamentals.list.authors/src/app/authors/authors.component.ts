@@ -10,6 +10,7 @@ import { AuthorsService } from '../authors.service';
               {{ author }}
           </li>
       </ul>
+      <button class="btn btn-primary">Testing Bootstrap</button>
   `
 })
 
