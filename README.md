@@ -56,6 +56,21 @@ To install all project dependencies (in package.json)
 
 > npm install
 
+#### Binding
+
+Default format is like:
+
+```
+    <button (<click/keyup>)="methodName($event)" [element.attribute]="<boolean/function that inform the property of the attribute>">Text</button>
+```
+
+Example:
+
+```
+    <button (click)="onSave($event)" [style.backgroundColor]="isActive ? 'blue' : 'white'" class="btn btn-primary">Save</button>
+```
+
+
 #### Other notes
 
 - *What is the difference between DOM(Document Object Model) and HTML*
