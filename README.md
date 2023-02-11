@@ -70,6 +70,11 @@ Example:
     <button (click)="onSave($event)" [style.backgroundColor]="isActive ? 'blue' : 'white'" class="btn btn-primary">Save</button>
 ```
 
+One option to receive values in a form is importing FormsModule in app.module.ts, it will permit use 
+
+> <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" class="mb-3" />
+
+if you have the attribute in class Component and the method that will receive the new value when the action happen, in this case keyup.enter.
 
 #### Other notes
 

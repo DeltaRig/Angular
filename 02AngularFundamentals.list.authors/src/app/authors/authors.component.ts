@@ -10,8 +10,7 @@ import { AuthorsService } from '../authors.service';
               {{ author }}
           </li>
       </ul>
-      <input (keyup.enter)="onKeyUp()" class="mb-3" />
-      <br>
+      <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" class="mb-3" />
       <button (click)="onClick($event)" [style.backgroundColor]="isActive ? 'blue' : 'white'" class="btn btn-primary">Save</button>
   `
 })
@@ -21,6 +20,7 @@ export class AuthorsComponent {
   countAuthors;
   authors;
   isActive = true;
+  email = "me@domain.com"
 
   constructor(service: AuthorsService) {
       this.authors = service.getAuthors();
@@ -32,6 +32,6 @@ export class AuthorsComponent {
   }
 
   onKeyUp() {
-    console.log("ENTER was pressed");
+    console.log(this.email); //return the value in the field
   }
 }
