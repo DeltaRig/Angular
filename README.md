@@ -75,29 +75,7 @@ One option to receive values in a form is importing FormsModule in app.module.ts
 if you have the attribute in class Component and the method that will receive the new value when the action happen, in this case keyup.enter.
 #### Pipes
 
-To strings/characteres:
-
-> {{ course.title | uppercase | lowercase }} 
-
-To number, if you want separete as a decimal for each 3 chars the default will make it:
-
-> {{ course.students | number }}
-
-Return: 30,102
-
-And to separate using other types specificing the number of integer digits, how much numbers should appear after the dot in the minimum and maximum. 
-
-> {{ course.rating | number:'1.2-2' }}
-
-And for prices you can specify too. The line bellow result in something like USD190.95
-
-> {{ course.price | currency:'AUD':true:'3.2-2' }}
-
-Also is possible use a pipe to change the data format.
-
-> {{ course.releaseDate | date:'shortDate' }}
-
-And a exemple of custom pipe in the summary.pipe.ts in the folder 02* .
+And a exemple of pipes and a custom pipe in course and the custum pipe is summary.pipe.ts in the folder 02* .
 
 
 #### Other notes

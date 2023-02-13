@@ -3,24 +3,24 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'title-casting',
   template: `
-  <input (keyup.enter)="onKeyUp($event)" class="mb-3" />
+  <input [(ngModel)]="field" (keyup.enter)="onKeyUp()" class="mb-3" />
   <br>
-  <button (click)="onClick($event)" class="btn btn-primary">Save</button>
-  <p [hidden]="!isActive">{{ field }}</p>
+  <button (click)="onClick()" class="btn btn-primary">Show Title Casting</button>
+  <p [hidden]="!isActive">{{ field | titleCasting }}</p>
   `
 })
 export class TitleCastingComponent {
   isActive = false;
-  field="Empty";
+  field="empty";
 
-  onClick($event: any) {
+  onClick() {
     this.isActive=true;
-    console.log("Button clicked", $event);
+    console.log("Button clicked");
   }
 
-  onKeyUp($event: any) {
+  onKeyUp() {
     this.isActive=true;
-    console.log("enter PRESSED clicked", $event);
+    console.log("enter PRESSED clicked");
   }
 
 }

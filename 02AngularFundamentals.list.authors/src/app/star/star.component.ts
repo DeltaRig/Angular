@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'star',
-  template: `<br>TESTE<br>
+  template: `
   <i (click)="onClick($event)" [class]="isFavorite ? 'bi-star' : 'bi-star-fill' " class="bi"></i>
   `
 })
