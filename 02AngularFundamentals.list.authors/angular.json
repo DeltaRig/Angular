@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "authors"
+  "defaultProject": "authors",
+  "cli": {
+    "analytics": "8c7eaf55-78d4-45a9-ab29-d051b690470e"
+  }
 }
