@@ -11,10 +11,7 @@ export class StarComponent {
   isFavorite=true;
 
   onClick($event: any) {
-    if(this.isFavorite)
-      this.isFavorite=false;
-    else
-      this.isFavorite=true;
+    this.isFavorite = !this.isFavorite;
   }
 
 }

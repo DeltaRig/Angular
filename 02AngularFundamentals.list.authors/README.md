@@ -28,7 +28,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Steps
 
-I add authors to make the author list:
+- *How would you use the ngFor directive to display the list of authors?*
+
 
 ```
 ng new authors
@@ -36,6 +37,10 @@ ng generate component authors
 ng generate service authors
 ```
 
-*How would you apply "glyphicon-star" class to an element if "isFavorite" is true?*
+- *How would you apply "glyphicon-star" class to an element if "isFavorite" is true?*
 
-Create a component to star.
+I create a component to star.
+
+- What access modifier do we use for methods that are internal to a class and should not be visible from the outside?
+
+I create title-casing.pipe.ts

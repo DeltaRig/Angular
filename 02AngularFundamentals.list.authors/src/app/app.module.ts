@@ -8,6 +8,7 @@ import { AuthorsComponent } from './authors/authors.component';
 import { CourseComponent } from './course/course.component';
 import { SummaryPipe } from './summary.pipe';
 import { StarComponent } from './star/star.component';
+import { TitleCastingComponent } from './title-casting/title-casting.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { StarComponent } from './star/star.component';
     AuthorsComponent,
     CourseComponent,
     SummaryPipe,
-    StarComponent
+    StarComponent,
+    TitleCastingComponent
   ],
   imports: [
     BrowserModule,

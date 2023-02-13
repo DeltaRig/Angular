@@ -40,8 +40,6 @@ To add a new component in the project
 
 The 'c' could be replaced by 's' if you want create a service
 
-- In the folder '02AngularFundamentals.list.authors' do you will find my solution for: How would you use the ngFor directive to display the list of authors?
-
 #### Adding bootstrap
 
 The command bellow should add a bootstrap folder with the path that you can import to use bootstrap items.
@@ -69,6 +67,8 @@ Example:
 ```
     <button (click)="onSave($event)" [style.backgroundColor]="isActive ? 'blue' : 'white'" class="btn btn-primary">Save</button>
 ```
+
+
 
 #### Pipes
 
