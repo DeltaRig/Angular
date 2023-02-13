@@ -28,9 +28,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Steps
 
+I add authors to make the author list:
+
 ```
 ng new authors
-ng g c authors
-ng g s authors
+ng generate component authors
+ng generate service authors
 ```
 
+*How would you apply "glyphicon-star" class to an element if "isFavorite" is true?*
+
+Create a component to star.

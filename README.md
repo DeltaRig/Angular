@@ -94,6 +94,7 @@ Also is possible use a pipe to change the data format.
 
 > {{ course.releaseDate | date:'shortDate' }}
 
+And a exemple of custom pipe in the summary.pipe.ts in the folder 02* .
 
 
 #### Other notes
