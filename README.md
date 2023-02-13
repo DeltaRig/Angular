@@ -70,13 +70,11 @@ Example:
     <button (click)="onSave($event)" [style.backgroundColor]="isActive ? 'blue' : 'white'" class="btn btn-primary">Save</button>
 ```
 
-<<<<<<< HEAD
 One option to receive values in a form is importing FormsModule in app.module.ts, it will permit use 
 
 > <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" class="mb-3" />
 
 if you have the attribute in class Component and the method that will receive the new value when the action happen, in this case keyup.enter.
-=======
 #### Pipes
 
 To strings/characteres:
@@ -103,7 +101,6 @@ Also is possible use a pipe to change the data format.
 
 And a exemple of custom pipe in the summary.pipe.ts in the folder 02* .
 
->>>>>>> 8f3c1f2e858158ebb361c640d7523139280990af
 
 #### Other notes
 
