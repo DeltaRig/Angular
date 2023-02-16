@@ -83,3 +83,5 @@ And a exemple of pipes and a custom pipe in course and the custum pipe is summar
 - *What is the difference between DOM(Document Object Model) and HTML*
 
 DOM is a model of objects that represent a structure of a docment, it's essentially a tree of objects in memory. And HTML is a markup language that we use to represent DOM in text. 
+
+- To make a component more reuseble add a bunch of input and output properties. Input to receive the state and the output to raise events from there custom components. This combination make up the component API (application programming interface).

@@ -3,4 +3,4 @@
 <authors></authors>
 <br><br>
 <course></course>
-<star></star>
+<favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged()" ></favorite>

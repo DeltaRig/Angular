@@ -39,7 +39,7 @@ ng generate service authors
 
 - *How would you apply "glyphicon-star" class to an element if "isFavorite" is true?*
 
-I create a component to star.
+I create a component to favorite.
 
 - What access modifier do we use for methods that are internal to a class and should not be visible from the outside?
 
