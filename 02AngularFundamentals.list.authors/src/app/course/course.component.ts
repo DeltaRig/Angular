@@ -2,19 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'course',
-  template: `
-  <div class="card border-dark mb-3" style="max-width: 18rem;">
-    <div class="card-header">{{ title | lowercase | uppercase}} <br></div>
-    <div class="card-body text-dark">
-    <h5 class="card-title">{{ text | summary:100 }}</h5>
-      <p class="card-text">Studants: {{ students | number }} <br>
-      Rating: {{ rating | number:'1.2-2' }} <br>
-      Price:{{ price | currency:'AUD':true:'3.2-2' }} <br>
-      Release Date: {{ releaseDate | date:'shortDate' }}</p>
-    </div>
-  </div>
-
-  ` 
+  templateUrl: './course.component.html'
 })
 
 export class CourseComponent {
