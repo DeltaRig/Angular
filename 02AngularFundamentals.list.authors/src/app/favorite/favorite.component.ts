@@ -15,6 +15,10 @@ export class FavoriteComponent implements OnInit {
 
   onClick() { 
     this.isFavorite = !this.isFavorite;
-    this.change.emit(); // this notify others that something has happened
+    this.change.emit(newValue: this.isFavorite); // this notify others that something has happened
   }
+}
+
+export interface FavoriteChangedEventArgs {
+  newValue: boolean
 }
