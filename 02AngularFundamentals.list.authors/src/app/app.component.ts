@@ -16,4 +16,6 @@ export class AppComponent {
   onFavoriteChanged(eventArgs: FavoriteChangedEventArgs) {
     console.log("favorite changed: ", eventArgs);
   }
+
+  courses=[1];
 }

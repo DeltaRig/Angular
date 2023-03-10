@@ -98,7 +98,48 @@ ng-content is used to display children in a template, ng-container is used as a 
 
 > <ng-container class=".class-name">Text that will be injected</ng-container>
 
+### Directives
 
+Structural: Modify the structure of the DOM
+
+Attribute: Modify the attributes of the DOM elements
+
+#### ngIf
+Works like a common if but for div or other
+
+```
+<div *ngIf="courses.length > 0" >
+    <h2>List of Courses</h2>
+    <course></course>
+</div>
+<div *ngIf="courses.length == 0">
+    No courses yet
+</div>
+```
+
+Other format, using *ng-template* to do the same thing:
+
+```
+<div *ngIf="courses.length > 0; else noCourses" >
+    <h2>List of Courses</h2>
+    <course></course>
+</div>
+<ng-template #noCourses>
+    No courses yet
+</ng-template>
+```
+
+Other way is using hidden property, "[hidden]="courses.legth == 0" that will hide if it be true. It's better use ngIf if you're working with a large tree with a lot of children because these elements can take substantial memory and computing resouces. Using ngIf you don't put them in the DOM if you're not going to show them to the user. The change detection mechanism in Angular keeps your views in sync with your components, that's running in the backgroud.
+
+#### ngSwitchCase
+
+
+
+#### ngFor
+
+#### ngClass
+
+#### ngStyle
 
 #### Other notes
 

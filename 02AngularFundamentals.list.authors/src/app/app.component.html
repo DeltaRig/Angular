@@ -2,7 +2,6 @@
 <title-casting></title-casting>
 <authors></authors>
 <br><br>
-<course></course>
 <bootsrap-panel>
     <ng-container class="header">Heading</ng-container>
     <div class="body">
@@ -11,3 +10,12 @@
     </div>
 </bootsrap-panel>
 <favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)" ></favorite>
+
+<div *ngIf="courses.length > 0; then coursesList else noCourses" ></div>
+<ng-template #coursesList>
+    <h2>List of Courses</h2>
+    <course></course>
+</ng-template>
+<ng-template #noCourses>
+    No courses yet
+</ng-template>
