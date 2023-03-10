@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms';
 import { CourseComponent } from './course/course.component';
 import { TitleCastingPipe } from './title-casting.pipe';
 import { SummaryPipe } from './summary.pipe';
-import { StarComponent } from './star/star.component';
 import { PanelComponent } from './panel/panel.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { TitleCastingComponent } from './title-casting/title-casting.component';
@@ -20,8 +19,7 @@ import { TitleCastingComponent } from './title-casting/title-casting.component';
     AuthorsComponent,
     CourseComponent,
     SummaryPipe,
-    StarComponent,
-    PanelComponent
+    PanelComponent,
     TitleCastingPipe,
     FavoriteComponent,
     TitleCastingComponent
