@@ -1,21 +1,56 @@
 <h1> Angular </h1>
-<title-casting></title-casting>
-<authors></authors>
-<br><br>
-<bootsrap-panel>
-    <ng-container class="header">Heading</ng-container>
-    <div class="body">
-        <h2>Title</h2>
-        <p>Some content here...</p>
-    </div>
-</bootsrap-panel>
-<favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)" ></favorite>
 
-<div *ngIf="courses.length > 0; then coursesList else noCourses" ></div>
-<ng-template #coursesList>
-    <h2>List of Courses</h2>
-    <course></course>
-</ng-template>
-<ng-template #noCourses>
-    No courses yet
-</ng-template>
+
+<ul class="nav nav-pills m-3">
+    <li class="nav-item">
+        <a [class.active]="viewMode == 'casting'" class="nav-link" (click)="viewMode = 'casting'">Title Casting
+        </a>
+    </li>
+    <li class="nav-item">
+        <a [class.active]="viewMode == 'authors'" class="nav-link" (click)="viewMode = 'authors'">List of Authors</a>
+    </li>
+    <li class="nav-item">
+        <a [class.active]="viewMode == 'courses'" class="nav-link" (click)="viewMode = 'courses'">List of Courses</a>
+    </li>
+    <li class="nav-item">
+        <a [class.active]="viewMode == 'panel'" class="nav-link" (click)="viewMode = 'panel'">Panel</a>
+    </li>
+    <li class="nav-item">
+        <a [class.active]="viewMode == 'favorite'" class="nav-link" (click)="viewMode = 'favorite'">Favorite</a>
+    </li>
+
+</ul>
+
+<div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'casting'"><title-casting></title-casting></div>
+    
+    <div *ngSwitchCase="'authors'"><authors></authors></div>
+
+    <div *ngSwitchCase="'panel'">
+        <bootsrap-panel>
+        <ng-container class="header">Heading</ng-container>
+        <div class="body">
+            <h2>Title</h2>
+            <p>Some content here...</p>
+        </div>
+        </bootsrap-panel>
+    </div>
+
+    <div *ngSwitchCase="'favorite'">
+        <favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)" ></favorite>
+    </div>
+
+    <div *ngSwitchCase="'courses'">
+        <div *ngIf="courses.length > 0; then coursesList else noCourses" ></div>
+        <ng-template #coursesList>
+            <h2>List of Courses</h2>
+            <course></course>
+        </ng-template>
+        <ng-template #noCourses>
+            No courses yet
+        </ng-template>
+    </div>
+
+    <div *ngSwitchDefault>Otherwise</div>
+
+</div>

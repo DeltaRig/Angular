@@ -18,4 +18,6 @@ export class AppComponent {
   }
 
   courses=[1];
+
+  viewMode = 'casting';
 }

@@ -133,7 +133,23 @@ Other way is using hidden property, "[hidden]="courses.legth == 0" that will hid
 
 #### ngSwitchCase
 
+```
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a [class.active]="viewMode == 'map'" class="nav-link" (click)="viewMode = 'map'">Map view Mode
+        </a>
+    </li>
+    <li class="nav-item">
+        <a [class.active]="viewMode == 'list'" class="nav-link" (click)="viewMode = 'list'">List view Mode</a>
+    </li>
+</ul>
 
+<div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'map'">Map view Content</div>
+    <div *ngSwitchCase="'list'">List view Content</div>
+    <div *ngSwitchDefault>Otherwise</div>
+</div>
+```
 
 #### ngFor
 
