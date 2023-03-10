@@ -1,4 +1,5 @@
 <h1> Angular </h1>
+<title-casting></title-casting>
 <authors></authors>
 <br><br>
 <course></course>
@@ -10,3 +11,4 @@
         <p>Some content here...</p>
     </div>
 </bootsrap-panel>
+<favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)" ></favorite>

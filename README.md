@@ -40,8 +40,6 @@ To add a new component in the project
 
 The 'c' could be replaced by 's' if you want create a service
 
-- In the folder '02AngularFundamentals.list.authors' do you will find my solution for: How would you use the ngFor directive to display the list of authors?
-
 #### Adding bootstrap
 
 The command bellow should add a bootstrap folder with the path that you can import to use bootstrap items.
@@ -78,29 +76,7 @@ if you have the attribute in class Component and the method that will receive th
 
 #### Pipes
 
-To strings/characteres:
-
-> {{ course.title | uppercase | lowercase }} 
-
-To number, if you want separete as a decimal for each 3 chars the default will make it:
-
-> {{ course.students | number }}
-
-Return: 30,102
-
-And to separate using other types specificing the number of integer digits, how much numbers should appear after the dot in the minimum and maximum. 
-
-> {{ course.rating | number:'1.2-2' }}
-
-And for prices you can specify too. The line bellow result in something like USD190.95
-
-> {{ course.price | currency:'AUD':true:'3.2-2' }}
-
-Also is possible use a pipe to change the data format.
-
-> {{ course.releaseDate | date:'shortDate' }}
-
-And a exemple of custom pipe in the summary.pipe.ts in the folder 02* .
+And a exemple of pipes and a custom pipe in course and the custum pipe is summary.pipe.ts in the folder 02* .
 
 #### ng-content
 
@@ -121,3 +97,5 @@ And when you call the component that have ng-content it should specefi which dat
 - *What is the difference between DOM(Document Object Model) and HTML*
 
 DOM is a model of objects that represent a structure of a docment, it's essentially a tree of objects in memory. And HTML is a markup language that we use to represent DOM in text. 
+
+- To make a component more reuseble add a bunch of input and output properties. Input to receive the state and the output to raise events from there custom components. This combination make up the component API (application programming interface).
