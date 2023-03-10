@@ -26,6 +26,21 @@
     
     <div *ngSwitchCase="'authors'"><authors></authors></div>
 
+    <div *ngSwitchCase="'courses'">
+        <div *ngIf="courses.length > 0; then coursesList else noCourses" ></div>
+        <ng-template #coursesList>
+            <h2>List of Courses</h2>
+            <ul>
+                <li *ngFor="let course of courses">
+                    <course [title]="course.title" [students]="course.students" [rating]="course.rating" [price]="course.price"></course>
+                </li>
+            </ul>
+        </ng-template>
+        <ng-template #noCourses>
+            No courses yet
+        </ng-template>
+    </div>
+    
     <div *ngSwitchCase="'panel'">
         <bootsrap-panel>
         <ng-container class="header">Heading</ng-container>
@@ -38,17 +53,6 @@
 
     <div *ngSwitchCase="'favorite'">
         <favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)" ></favorite>
-    </div>
-
-    <div *ngSwitchCase="'courses'">
-        <div *ngIf="courses.length > 0; then coursesList else noCourses" ></div>
-        <ng-template #coursesList>
-            <h2>List of Courses</h2>
-            <course></course>
-        </ng-template>
-        <ng-template #noCourses>
-            No courses yet
-        </ng-template>
     </div>
 
     <div *ngSwitchDefault>Otherwise</div>

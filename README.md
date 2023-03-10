@@ -151,7 +151,7 @@ Other way is using hidden property, "[hidden]="courses.legth == 0" that will hid
 </div>
 ```
 
-#### ngFor
+#### [https://angular.io/api/common/NgForOf](ngFor)
 
 #### ngClass
 
