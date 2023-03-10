@@ -88,9 +88,17 @@ And when you call the component that have ng-content it should specefi which dat
 
 ```
 <my-component>
-    <div class=".class-name">Text that will be injected</div>
+    <div class=".class-name">Here the div that will be injected together with the text</div>
     ...
 ```
+
+#### gn-conteiner
+
+ng-content is used to display children in a template, ng-container is used as a non-rendered container to avoid having to add a span or a div. And to use it, the only difference from ng-content is that call like this:
+
+> <ng-container class=".class-name">Text that will be injected</ng-container>
+
+
 
 #### Other notes
 
