@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CourseComponent } from './course/course.component';
 import { SummaryPipe } from './summary.pipe';
 import { StarComponent } from './star/star.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { StarComponent } from './star/star.component';
     AuthorsComponent,
     CourseComponent,
     SummaryPipe,
-    StarComponent
+    StarComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,

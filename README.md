@@ -75,6 +75,7 @@ One option to receive values in a form is importing FormsModule in app.module.ts
 > <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" class="mb-3" />
 
 if you have the attribute in class Component and the method that will receive the new value when the action happen, in this case keyup.enter.
+
 #### Pipes
 
 To strings/characteres:
@@ -101,6 +102,19 @@ Also is possible use a pipe to change the data format.
 
 And a exemple of custom pipe in the summary.pipe.ts in the folder 02* .
 
+#### ng-content
+
+<ng-content> is used to create configurable components. To indicate which selector will be used when the data is injected:
+
+> <ng-content select=".class-name"></ng-content> 
+
+And when you call the component that have ng-content it should specefi which data will be injected, like in the exemple bellow:
+
+```
+<my-component>
+    <div class=".class-name">Text that will be injected</div>
+    ...
+```
 
 #### Other notes
 
