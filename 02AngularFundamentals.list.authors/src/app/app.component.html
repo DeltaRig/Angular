@@ -18,7 +18,6 @@
     <li class="nav-item">
         <a [class.active]="viewMode == 'favorite'" class="nav-link" (click)="viewMode = 'favorite'">Favorite</a>
     </li>
-
 </ul>
 
 <div [ngSwitch]="viewMode">
@@ -31,14 +30,16 @@
         <ng-template #coursesList>
             <h2>List of Courses</h2>
             <ul>
-                <li *ngFor="let course of courses">
+                <li class="m-3" *ngFor="let course of courses">
                     <course [title]="course.title" [students]="course.students" [rating]="course.rating" [price]="course.price"></course>
+                    <button class="mt-1" (click)="onRemoveCourse(course)">Remove</button>
                 </li>
             </ul>
         </ng-template>
         <ng-template #noCourses>
             No courses yet
         </ng-template>
+        <button  type="button" class="btn btn-primary" (click)="onAddCourse()">Add</button>
     </div>
     
     <div *ngSwitchCase="'panel'">
