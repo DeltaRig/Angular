@@ -151,7 +151,9 @@ Other way is using hidden property, "[hidden]="courses.legth == 0" that will hid
 </div>
 ```
 
-#### [https://angular.io/api/common/NgForOf](ngFor)
+#### (https://angular.io/api/common/NgForOf)[ngFor]
+
+And ngFor could be used with trackBy to improve performace, look (https://netbasal.com/angular-2-improve-performance-with-trackby-cc147b5104e5)[here].
 
 #### ngClass
 
@@ -164,3 +166,7 @@ Other way is using hidden property, "[hidden]="courses.legth == 0" that will hid
 DOM is a model of objects that represent a structure of a docment, it's essentially a tree of objects in memory. And HTML is a markup language that we use to represent DOM in text. 
 
 - To make a component more reuseble add a bunch of input and output properties. Input to receive the state and the output to raise events from there custom components. This combination make up the component API (application programming interface).
+
+- Why we use Leading Asterisk (*) before the "ng"?
+
+When Angular sees this leading asterisk with structural directives, it's going to rewrite that block using ng-template. 
