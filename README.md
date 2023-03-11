@@ -155,9 +155,44 @@ Other way is using hidden property, "[hidden]="courses.legth == 0" that will hid
 
 And ngFor could be used with trackBy to improve performace, look (https://netbasal.com/angular-2-improve-performance-with-trackby-cc147b5104e5)[here].
 
-#### ngClass
+#### (https://angular.io/api/common/NgClass)[ngClass]
+
+Is a easy way to define which class will be true, like in favorite component:
+
+```
+<i 
+    [ngClass]="{
+        'bi-star': isFavorite,
+        'bi-star-fill': !isFavorite
+    }">
+</i>
+```
 
 #### ngStyle
+
+ngStyle could help to achive a clean code, like you can transform this:
+
+```
+<button
+    [style.backgroudColor]="canSave ? 'blue':'gray'"
+    [style.color]="canSave ? 'white':black"
+    [style.fontWeight]="canSave ? 'bold':'normal'"    
+>Save</button>
+```
+
+on this:
+
+```
+<button
+    [ngStyle]="{
+        backgroudColor:=canSave ? 'blue':'gray',
+        color=canSave ? 'white':black,
+        fontWeight=canSave ? 'bold':'normal'
+    }"
+>Save</button>
+```
+
+For many cases we prefer use the css style, but sometimes in certain situations, we want to add styles explicitly in the html.
 
 #### Other notes
 
