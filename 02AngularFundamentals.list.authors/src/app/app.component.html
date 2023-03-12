@@ -18,6 +18,9 @@
     <li class="nav-item">
         <a [class.active]="viewMode == 'favorite'" class="nav-link" (click)="viewMode = 'favorite'">Favorite</a>
     </li>
+    <li class="nav-item">
+        <a [class.active]="viewMode == 'input'" class="nav-link" (click)="viewMode = 'input'">Input Format</a>
+    </li>
 </ul>
 
 <div [ngSwitch]="viewMode">
@@ -56,6 +59,14 @@
         <favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)" ></favorite>
     </div>
 
+    <div *ngSwitchCase="'input'">
+        <input type="text" [appInputFormat]="'uppercase'" class="m-3">
+
+        <zippy title="Directive Details">Here we created two directives, one for input format, where you pass a atribute format and it will be apply when the user blur the field.<br>And this zippy is a component, to ocult the details instend of the user click to it appear. This directive just receive the title.</zippy>
+    </div>
+    
+
     <div *ngSwitchDefault>Otherwise</div>
 
+    
 </div>

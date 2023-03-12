@@ -12,6 +12,8 @@ import { SummaryPipe } from './summary.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { TitleCastingComponent } from './title-casting/title-casting.component';
+import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { TitleCastingComponent } from './title-casting/title-casting.component';
     PanelComponent,
     TitleCastingPipe,
     FavoriteComponent,
-    TitleCastingComponent
+    TitleCastingComponent,
+    InputFormatDirective,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,

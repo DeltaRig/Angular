@@ -194,6 +194,14 @@ on this:
 
 For many cases we prefer use the css style, but sometimes in certain situations, we want to add styles explicitly in the html.
 
+#### Create custom directives
+
+> ng g d <directive-name>
+
+it will create 2 files and modify app.module.ts
+
+
+
 #### Other notes
 
 - *What is the difference between DOM(Document Object Model) and HTML*
