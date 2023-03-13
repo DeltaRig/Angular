@@ -151,11 +151,11 @@ Other way is using hidden property, "[hidden]="courses.legth == 0" that will hid
 </div>
 ```
 
-#### (https://angular.io/api/common/NgForOf)[ngFor]
+#### [ngFor](https://angular.io/api/common/NgForOf)
 
-And ngFor could be used with trackBy to improve performace, look (https://netbasal.com/angular-2-improve-performance-with-trackby-cc147b5104e5)[here].
+And ngFor could be used with trackBy to improve performace, look [here](https://netbasal.com/angular-2-improve-performance-with-trackby-cc147b5104e5).
 
-#### (https://angular.io/api/common/NgClass)[ngClass]
+#### [ngClass](https://angular.io/api/common/NgClass)
 
 Is a easy way to define which class will be true, like in favorite component:
 
