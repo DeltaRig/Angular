@@ -196,7 +196,7 @@ For many cases we prefer use the css style, but sometimes in certain situations,
 
 #### Create custom directives
 
-> ng g d <directive-name>
+> ng g d directive-name
 
 it will create 2 files and modify app.module.ts
 
