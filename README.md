@@ -209,6 +209,10 @@ it will create 2 files and modify app.module.ts
 | Unit testable | Easier to create |
 | | Less code |
 
+#### ngModel
+
+
+
 #### Other notes
 
 - *What is the difference between DOM(Document Object Model) and HTML*
