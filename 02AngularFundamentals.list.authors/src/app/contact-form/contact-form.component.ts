@@ -7,4 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactFormComponent {
   log(x: any) { console.log(x);}
+
+  submit(f: any){
+    console.log(f);
+    console.log(f.value.comment)
+  }
 }

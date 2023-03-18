@@ -248,7 +248,41 @@ How show or check the error:
 
 .form-control.ng-touched.ng-invalid
 
+#### ngForm
 
+We have created a template reference variable named myForm that references the ngForm directive on the `<form>` element. We have also bound the ngSubmit event to the onSubmit() method of our component. Check bellow:
+
+> <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+
+Once you have created your form with ngForm, you can use a variety of directives and tools to bind your form elements to model data and validate user input. Some of the key directives and tools available with ngForm include:
+
+- ngModel: used to bind an input field to a model property
+- ngModelGroup: used to group a set of input fields together in the form data model
+- ngForm: used to nest forms inside other forms
+- ngSubmit: used to trigger a method in your component when the form is submitted
+- form.controls: provides access to the form controls and their validation state
+
+#### ngModelGroup
+
+Simplifying form validation: By grouping form controls together, you can simplify your form validation logic. For example, if you have a group of required fields, you can use ngModelGroup to validate them all at once. This can help to reduce the amount of validation code you need to write, and can make your code more readable and maintainable.
+
+Conditional validation: ngModelGroup allows you to perform validation on a group of fields based on a specific condition. For example, you can use ngModelGroup to validate a set of fields only if a certain checkbox is checked or a radio button is selected. This can be very useful for complex forms where some fields are only required or valid in certain contexts.
+
+```
+<form>
+  <div ngModelGroup="address">
+    <div *ngIf="!contact.valid">... error messages ... </div>
+    <label>Street Address</label>
+    <input type="text" name="street">
+    <label>City</label>
+    <input type="text" name="city">
+    <label>State</label>
+    <input type="text" name="state">
+    <label>Zip Code</label>
+    <input type="text" name="zip">
+  </div>
+</form>
+```
 
 ### Other notes
 
@@ -261,3 +295,5 @@ DOM is a model of objects that represent a structure of a docment, it's essentia
 - Why we use Leading Asterisk (*) before the "ng"?
 
 When Angular sees this leading asterisk with structural directives, it's going to rewrite that block using ng-template. 
+
+- The #name="ng*" syntax creates a template reference variable that references all ng* directives on the input element. This can be useful if you need to access multiple directives on the same element, or if you want to create a more general reference to the element that can be used in multiple contexts. This includes directives such as ngModel, ngForm, ngIf, ngFor, and so on.
