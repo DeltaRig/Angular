@@ -211,7 +211,27 @@ it will create 2 files and modify app.module.ts
 
 #### ngModel
 
+The ngModel directive binds the value of the input element to a property on the component. This means that any changes made to the input element are automatically reflected in the component property, and vice versa.
 
+If the component property is updated programmatically, such as by calling a method or receiving data from an API, the ngModel directive updates the value of the input element to reflect the new value of the property.
+
+#### Specific validation errors for forms
+
+How add a validation in the input:
+```
+<input required minlength="3" maxlength="10" pattern="[0-9]+">
+```
+
+How show or check the error:
+```
+<div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+    <div *ngIf="firstName.errors?.['required']">First Name is required.</div>
+    <div *ngIf="firstName.errors?.['minlength']">First name should be minimum 3 characters.</div>
+    ...
+</div>
+```
+
+The way to check the error had change from Angular 4 to 5.
 
 #### Other notes
 
