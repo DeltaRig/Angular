@@ -219,21 +219,38 @@ If the component property is updated programmatically, such as by calling a meth
 
 How add a validation in the input:
 ```
-<input required minlength="3" maxlength="10" pattern="[0-9]+">
+<input 
+    required 
+    minlength="3" 
+    maxlength="10" 
+    pattern="[0-9]+">
 ```
 
 How show or check the error:
 ```
-<div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
-    <div *ngIf="firstName.errors?.['required']">First Name is required.</div>
-    <div *ngIf="firstName.errors?.['minlength']">First name should be minimum 3 characters.</div>
+<div 
+    class="alert alert-danger" 
+    *ngIf="firstName.touched && !firstName.valid">
+    <div *ngIf="firstName.errors?.['required']">
+        First Name is required.
+    </div>
+    <div *ngIf="firstName.errors?.['minlength']">
+        First name should be minimum {{ firstName.errors?.['minlength'].requiredLength}} characters.
+    </div>
     ...
 </div>
 ```
 
-The way to check the error had change from Angular 4 to 5.
+- The way to check the error had change from Angular 4 to 5.
+- *Cleaner Template* is like in the last code, you put one item by line so when other developer check the code, like which are the requisites for this field, will be easy to find and read.
 
-#### Other notes
+#### Styling Invalid Input Fields
+
+.form-control.ng-touched.ng-invalid
+
+
+
+### Other notes
 
 - *What is the difference between DOM(Document Object Model) and HTML*
 
