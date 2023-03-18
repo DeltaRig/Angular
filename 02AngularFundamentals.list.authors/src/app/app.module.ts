@@ -14,6 +14,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { TitleCastingComponent } from './title-casting/title-casting.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ZippyComponent } from './zippy/zippy.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ZippyComponent } from './zippy/zippy.component';
     FavoriteComponent,
     TitleCastingComponent,
     InputFormatDirective,
-    ZippyComponent
+    ZippyComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
