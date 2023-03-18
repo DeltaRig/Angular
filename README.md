@@ -200,7 +200,14 @@ For many cases we prefer use the css style, but sometimes in certain situations,
 
 it will create 2 files and modify app.module.ts
 
+### Template-driven Forms
 
+| Reactive  | Template-drive |
+| ------------- | ------------- |
+| More control over validation logic  | Simple validation  |
+| Good for complex forms  | Good for simple forms  |
+| Unit testable | Easier to create |
+| | Less code |
 
 #### Other notes
 
