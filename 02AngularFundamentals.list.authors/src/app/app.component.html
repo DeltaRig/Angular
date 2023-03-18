@@ -22,7 +22,7 @@
         <a [class.active]="viewMode == 'input'" class="nav-link" (click)="viewMode = 'input'">Input Format</a>
     </li>
     <li class="nav-item">
-        <a [class.active]="viewMode == 'form'" class="nav-link" (click)="viewMode = 'form'">Contact Form</a>
+        <a [class.active]="viewMode == 'form'" class="nav-link" (click)="viewMode = 'form'">Course Form</a>
     </li>
 </ul>
 
@@ -69,7 +69,7 @@
     </div>
 
     <div *ngSwitchCase="'form'">
-        <contact-form></contact-form>
+        <course-form></course-form>
     </div>
     
 
