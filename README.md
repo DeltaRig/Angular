@@ -286,6 +286,42 @@ Conditional validation: ngModelGroup allows you to perform validation on a group
 
 ### Reactive Forms
 
+In Angular, both FormControl and FormGroup are subclasses of AbstractControl. AbstractControl is an abstract base class that provides common functionality for all types of form controls, including FormControl, FormGroup, and FormArray.
+
+_AbstractControl_ defines the following properties and methods that are common to all form controls:
+
+- value: The current value of the form control.
+- status: The validation status of the form control (e.g. valid, invalid, pending).
+- valid: A boolean indicating whether the form control is currently valid.
+- invalid: A boolean indicating whether the form control is currently invalid.
+- pending: A boolean indicating whether the form control is currently pending validation.
+- errors: An object containing any validation errors for the form control.
+- pristine: A boolean indicating whether the form control has been touched by the user.
+- dirty: A boolean indicating whether the form control has been modified by the user.
+- touched: A boolean indicating whether the form control has been touched by the user.
+- untouched: A boolean indicating whether the form control has not been touched by the user.
+- markAsTouched(): Marks the form control as touched.
+- markAsUntouched(): Marks the form control as untouched.
+- markAsDirty(): Marks the form control as dirty.
+- markAsPristine(): Marks the form control as pristine.
+- setValidators(): Sets the validators for the form control.
+- setAsyncValidators(): Sets the asynchronous validators for the form control.
+
+FormControl extends AbstractControl and adds a few properties and methods that are specific to single form controls, such as:
+
+- setValue(): Sets the value of the form control.
+- patchValue(): Sets the value of the form control without emitting a value change event.
+- reset(): Resets the form control to its initial state.
+- disabled: A boolean indicating whether the form control is currently disabled.
+- enable(): Enables the form control.
+- disable(): Disables the form control.
+
+FormGroup also extends AbstractControl, but it represents a group of related form controls. It has all the properties and methods of AbstractControl and adds a few methods that are specific to groups of form controls, such as:
+
+- addControl(): Adds a control to the group.
+- removeControl(): Removes a control from the group.
+- get(): Gets a control from the group using its name.
+- contains(): Checks whether a control exists in the group.
 
 
 ### Other notes

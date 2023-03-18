@@ -24,6 +24,9 @@
     <li class="nav-item">
         <a [class.active]="viewMode == 'form'" class="nav-link" (click)="viewMode = 'form'">Course Form</a>
     </li>
+    <li class="nav-item">
+        <a [class.active]="viewMode == 'signup'" class="nav-link" (click)="viewMode = 'signup'">Sign Up</a>
+    </li>
 </ul>
 
 <div [ngSwitch]="viewMode">
@@ -70,6 +73,9 @@
 
     <div *ngSwitchCase="'form'">
         <course-form></course-form>
+    </div>
+
+    <div *ngSwitchCase="'signup'">
         <signup-form></signup-form>
     </div>
     

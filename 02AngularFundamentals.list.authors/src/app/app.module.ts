@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CourseComponent } from './course/course.component';
 import { TitleCastingPipe } from './title-casting.pipe';
 import { SummaryPipe } from './summary.pipe';
@@ -37,7 +37,8 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthorsService
