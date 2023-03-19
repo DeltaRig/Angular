@@ -25,4 +25,16 @@ export class SignupFormComponent {
   }
 
   log(x: any) { console.log(x);}
+
+  login(){
+    this.form.setErrors({
+      invalidLogin: true
+    })
+    // let isValid = authServise.login(this.form.value);
+    // if (!isValid){
+    //   this.form.setErrors({
+    //     invalidLogin: true
+    //   })
+    // }
+  }
 }
