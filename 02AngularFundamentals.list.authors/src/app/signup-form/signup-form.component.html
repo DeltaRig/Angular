@@ -7,8 +7,8 @@
             type="text" 
             class="form-control"
             (change)="log(username)">
-        <div 
-            class="alert alert-danger"
+        <div *ngIf="username?.pending">Checking for uniqueness...</div>
+        <div class="alert alert-danger"
             *ngIf="username?.touched && username?.invalid" >
             <div *ngIf="form.controls['username']?.errors?.['required']">Username is required</div>
             <div *ngIf="form.controls['username']?.errors?.['cannotContainSpace']">Username cannot contain space</div>
