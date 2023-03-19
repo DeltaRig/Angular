@@ -323,6 +323,18 @@ FormGroup also extends AbstractControl, but it represents a group of related for
 - get(): Gets a control from the group using its name.
 - contains(): Checks whether a control exists in the group.
 
+#### Asynchronous Operations
+- Calling the server (AJAX)
+- Timer functions
+
+```
+setTimeout(() => {
+    // operations
+}, 2000);
+```
+
+#### Asynchronous Validators
+
 
 ### Other notes
 
