@@ -286,7 +286,7 @@ Conditional validation: ngModelGroup allows you to perform validation on a group
 
 ### Reactive Forms
 
-In Angular, both FormControl and FormGroup are subclasses of AbstractControl. AbstractControl is an abstract base class that provides common functionality for all types of form controls, including FormControl, FormGroup, and FormArray.
+In Angular, FormControl, FormGroup and _FormArray_ are subclasses of AbstractControl. AbstractControl is an abstract base class that provides common functionality for all types of form controls, including FormControl, FormGroup, and FormArray.
 
 _AbstractControl_ defines the following properties and methods that are common to all form controls:
 
