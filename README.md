@@ -323,21 +323,31 @@ FormGroup also extends AbstractControl, but it represents a group of related for
 - get(): Gets a control from the group using its name.
 - contains(): Checks whether a control exists in the group.
 
+### Form Builder
+
+FormBuilder is a convenience service that provides a simplified API for creating and managing Angular reactive forms. It helps to reduce the amount of boilerplate code needed to create form controls and provides a consistent way to handle form inputs. FormBuilder is a higher-level abstraction over the FormControl and FormGroup classes.
+
+
 #### Asynchronous Operations
 - Calling the server (AJAX)
 - Timer functions
 
 ```
-setTimeout(() => {
-    // operations
-}, 2000);
+static shouldBeUnique(control: AbstractControl): Promise<ValidationErrors | null> | Observable<ValidationErrors | null> {
+    return new Promise(async resolve => {
+        console.log("Validating uniqueness...");
+        setTimeout(() => {
+            ...
+        }, 2000);
+    });
+}
 ```
 
 To add a message when a async process is running you can add something like this:
 
 > <div *ngIf="field?.pending">Checking for ...</div>
 
-#### Asynchronous Validators
+
 
 
 ### Other notes

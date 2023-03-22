@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormGroup, FormControl } from '@angular/forms';
+import { FormArray, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'course-form',
@@ -7,9 +7,23 @@ import { FormArray, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./course-form.component.css']
 })
 export class CourseFormComponent {
+  /* Commented just to have a FormBuilder example
   form = new FormGroup ({
-    topics: new FormArray([])
-  });
+    name: new FormControl('', Validators.required),
+    categories: new FormControl(),
+    topics: new FormArray([]),
+    haveGuarantee: new FormControl
+  });*/
+
+  form;
+  constructor(fb: FormBuilder){
+    this.form = fb.group({
+      name: ['', Validators.required],
+      categories: [],
+      topics: fb.array([]),
+      haveGuarantee: []
+    });
+  }
 
   categories = [
     { id: 1, name: 'Development'},
