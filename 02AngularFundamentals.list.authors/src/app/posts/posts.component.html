@@ -1,4 +1,5 @@
 <p>posts works!</p>
+<input (keyup.enter)="createPost(title)" #title type="text" class="form-control">
 <ul class="list-group">
     <li 
     *ngFor="let post of posts"

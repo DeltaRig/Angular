@@ -8,12 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent  {
   posts: any | undefined;
+  private url = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private http: HttpClient) { 
-    http.get('https://jsonplaceholder.typicode.com/posts').subscribe(response => {
+    http.get(this.url).subscribe(response => {
       console.log(response);
       this.posts = response;
     });
   }
 
+  createPost(input: HTMLInputElement) {
+    let post: any = {title: input.value};
+    input.value = '';
+
+    this.http.post(this.url, JSON.stringify(post)).subscribe(response => {
+      //post['id'] = response.json().id;
+      this.posts.splice(0,0,post);
+      console.log(response);
+    });
+  }
 }
