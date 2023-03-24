@@ -17,6 +17,8 @@ import { ZippyComponent } from './zippy/zippy.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { CourseFormComponent } from './course-form/course-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +34,15 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     InputFormatDirective,
     ZippyComponent,
     ContactFormComponent,
-    CourseFormComponent
+    CourseFormComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [
     AuthorsService

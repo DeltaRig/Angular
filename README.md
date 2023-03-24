@@ -347,7 +347,11 @@ To add a message when a async process is running you can add something like this
 
 > <div *ngIf="field?.pending">Checking for ...</div>
 
+# I stop in the Reactive Forms assignment
 
+### Consuming HTTP Services
+
+- Needs import { HttpClientModule } from '@angular/common/http'
 
 
 ### Other notes
