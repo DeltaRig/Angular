@@ -1,9 +1,12 @@
-<p>posts works!</p>
 <input (keyup.enter)="createPost(title)" #title type="text" class="form-control">
 <ul class="list-group">
+    
     <li 
     *ngFor="let post of posts"
-    class="list-group-item">
-    {{ post.title }}
+    class="list-group-item d-flex bd-highlight mb-3">
+    <div class="me-auto bd-highlight">{{ post.title }}</div>
+    <button
+    (click)="updatePost(post)"
+    class="btn btn-outline-secondary btn-sm bd-highlight">Update</button>
     </li>
 </ul>

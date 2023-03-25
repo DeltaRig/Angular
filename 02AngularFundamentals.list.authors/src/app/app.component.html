@@ -27,6 +27,9 @@
     <li class="nav-item">
         <a [class.active]="viewMode == 'signup'" class="nav-link" (click)="viewMode = 'signup'">Sign Up</a>
     </li>
+    <li class="nav-item">
+        <a [class.active]="viewMode == 'http'" class="nav-link" (click)="viewMode = 'http'">Http Functions</a>
+    </li>
 </ul>
 
 <div [ngSwitch]="viewMode">
@@ -79,8 +82,11 @@
         <signup-form></signup-form>
     </div>
     
+    <div *ngSwitchCase="'http'">
+        <posts></posts>
+    </div>
 
     <div *ngSwitchDefault>Otherwise</div>
 </div>
 
-<posts></posts>
+
