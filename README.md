@@ -351,8 +351,20 @@ To add a message when a async process is running you can add something like this
 
 ### Consuming HTTP Services
 
-- Needs import { HttpClientModule } from '@angular/common/http'
+To use the HTTP client, you first need to import the HttpClientModule from '@angular/common/http' in your application's root module. Then, you can inject the HttpClient service in your component or service and use its methods to make HTTP requests.
 
+The HTTP client also supports interceptors, which allow you to intercept and modify HTTP requests and responses. Interceptors can be used to add headers, transform request or response data, and handle errors.
+
+To handle errors, you can use the catchError operator from the 'rxjs/operators' library, which allows you to catch errors and return a custom error response.
+
+In addition, Angular provides a HttpParams class for creating URL query parameters and a HttpHeaders class for creating HTTP headers. These classes can be used to configure HTTP requests with query parameters, headers, and other options.
+
+#### Lifecycle Hooks
+- OnInit
+- OnChanges
+- DoCheck
+- AfterContentInit
+- ...
 
 ### Other notes
 
