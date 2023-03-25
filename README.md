@@ -359,6 +359,20 @@ To handle errors, you can use the catchError operator from the 'rxjs/operators' 
 
 In addition, Angular provides a HttpParams class for creating URL query parameters and a HttpHeaders class for creating HTTP headers. These classes can be used to configure HTTP requests with query parameters, headers, and other options.
 
+#### Separation of Concerns
+
+_Component Layer:_ The component layer is responsible for displaying data to the user and handling user interactions. By separating the display logic from the HTTP request logic, you can make your code easier to understand and maintain. The component layer can call the service layer to retrieve data and then update the view accordingly.
+
+_Service Layer:_ The service layer is responsible for handling HTTP requests and responses. By encapsulating HTTP requests in a service, you can separate concerns and make your code more modular. The service layer can also handle error handling, headers, and other HTTP configurations.
+
+_Model Layer:_ The model layer is responsible for defining the data models used in the application. By separating data models from the HTTP request logic, you can make your code more reusable and easier to test. The model layer can define classes or interfaces to represent the data returned by HTTP requests.
+
+Our classes should have a single responsibility. By separating concerns into different layers, you can create a more modular and maintainable codebase. The service layer can handle HTTP requests and responses, the component layer can display data to the user, and the model layer can define the data models used in the application.
+
+And it will solve all the details about working with this backend is encapsulated in one place and we can reuse this in multiple places. One benefit is that if in the future some detail changes, for example the URL, we have to update only one place in our code. The second benefit is that when we want to unit test our input, we can create a fake implementation of this service that doesn't make HTTP calls to the server.
+
+> ng g s service_name
+
 #### Lifecycle Hooks
 - OnInit
 - OnChanges

@@ -1,4 +1,4 @@
-import { AuthorsService } from './authors.service';
+import { AuthorsService } from './services/authors.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,6 +19,7 @@ import { CourseFormComponent } from './course-form/course-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostsComponent } from './posts/posts.component';
+import { PostService } from './services/post.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { PostsComponent } from './posts/posts.component';
     HttpClientModule,
   ],
   providers: [
-    AuthorsService
+    AuthorsService,
+    PostService,
   ],
   bootstrap: [AppComponent]
 })
