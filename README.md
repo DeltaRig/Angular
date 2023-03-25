@@ -373,6 +373,14 @@ And it will solve all the details about working with this backend is encapsulate
 
 > ng g s service_name
 
+#### Handling Errors
+
+| Unexpected  | Expected |
+| ------------- | ------------- |
+| Server is offline  | "Not Found" errors (404) |
+| Network is down  | "Bad request" errors (400)  |
+| Unhandled exceptions | |
+
 #### Lifecycle Hooks
 - OnInit
 - OnChanges
