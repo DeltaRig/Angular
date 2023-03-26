@@ -381,6 +381,10 @@ And it will solve all the details about working with this backend is encapsulate
 | Network is down  | "Bad request" errors (400)  |
 | Unhandled exceptions | |
 
+_How to handle unexpected errors:_ subscribe method accept a second optional parameter that it's possible set what should happen in case of unexpected error. Passing an object to the subscribe method instead of two functions that is deprecated. The object contains two properties: _next_ and _error_, which are functions that handle the response and error cases, respectively. The _error_ function now takes an _err_ parameter and returns an _ObservableInput<any> _(which can be _void_).
+
+_How to handle expected errors:_ subscribe method accept a second optional parameter that it's possible set what should happen in case of unexpected error.
+
 #### Lifecycle Hooks
 - OnInit
 - OnChanges
