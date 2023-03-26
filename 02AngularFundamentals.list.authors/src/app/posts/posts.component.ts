@@ -11,15 +11,15 @@ import { PostService } from '../services/post.service';
 })
 
 export class PostsComponent implements OnInit {
-  posts: any | undefined;
+  posts: any[] = [];
   
 
   constructor(private service: PostService) { }
 
   ngOnInit(): void {
-    this.posts = this.service.getPosts()
+    this.service.getPosts()
     .subscribe({
-      next: response => {
+      next: (response: any[]) => {
         this.posts = response;
       },
       error: (err: any) => {
