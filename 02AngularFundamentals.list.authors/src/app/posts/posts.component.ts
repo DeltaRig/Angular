@@ -41,9 +41,14 @@ export class PostsComponent implements OnInit {
         this.posts.splice(0,0,post);
         console.log(response);
       }, 
-      error: err => {
+      error: (err: Response) => {
+        if(err.status === 400)
+          //this.form.setErrors(err.json());
+          console.log("400 to create a post");
+        else{
+          alert('An unexpected error occured.');
+        }
         console.log(err);
-        alert('An unexpected error occured.');
       }
     });
   }
@@ -68,9 +73,11 @@ export class PostsComponent implements OnInit {
     .subscribe({
       next: response => {
         let index = this.posts.indexOf(post);
-        this.posts.splice(index, 1);
+        if (index >= 0) {
+          this.posts.splice(index, 1);
+        }
       }, 
-      error: err => {
+      error: (err: Response) => {
         // it's possible receive an unexist id
         if(err.status === 404)
           alert('This post has already been deleted.')
