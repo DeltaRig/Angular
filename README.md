@@ -405,3 +405,9 @@ DOM is a model of objects that represent a structure of a docment, it's essentia
 When Angular sees this leading asterisk with structural directives, it's going to rewrite that block using ng-template. 
 
 - The #name="ng*" syntax creates a template reference variable that references all ng* directives on the input element. This can be useful if you need to access multiple directives on the same element, or if you want to create a more general reference to the element that can be used in multiple contexts. This includes directives such as ngModel, ngForm, ngIf, ngFor, and so on.
+
+
+#### References:
+
+- [The Complete Angular Course: Beginner to Advanced](udemy.com/course/the-complete-angular-master-class) adapting to version 13
+- [Angular Documentation](https://angular.io/)
