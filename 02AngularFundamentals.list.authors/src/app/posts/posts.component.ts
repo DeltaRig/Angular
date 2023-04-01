@@ -1,7 +1,4 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
 import { PostService } from '../services/post.service';
 
 @Component({
@@ -14,10 +11,10 @@ export class PostsComponent implements OnInit {
   posts: any[] = [];
   
 
-  constructor(private service: PostService) { }
+  constructor(private postService: PostService) { }
 
   ngOnInit(): void {
-    this.service.getPosts()
+    this.postService.getAll()
     .subscribe({
       next: (response: any[]) => {
         this.posts = response;
@@ -33,7 +30,7 @@ export class PostsComponent implements OnInit {
     let post: any = {title: input.value};
     input.value = '';
 
-    this.service.createPost(post)
+    this.postService.create(post)
     .subscribe({
       next: response => {
         //post['id'] = response.json().id;
@@ -48,7 +45,7 @@ export class PostsComponent implements OnInit {
 
   updatePost(post: any) {
     //this.http.put(this.url, JSON.stringify(post));
-    this.service.updatePost(post.id)
+    this.postService.update(post.id)
     .subscribe({
       next: response => {
         console.log(response)
@@ -62,7 +59,7 @@ export class PostsComponent implements OnInit {
 
 
   deletePost(post: any) {
-    this.service.deletePost(post.id)
+    this.postService.delete(post.id)
     .subscribe({
       next: response => {
         let index = this.posts.indexOf(post);
