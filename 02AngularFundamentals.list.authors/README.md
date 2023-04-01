@@ -44,3 +44,7 @@ I create a component to favorite.
 - What access modifier do we use for methods that are internal to a class and should not be visible from the outside?
 
 I create title-casing.pipe.ts and the component title-casing to check the result.
+
+
+## Doubts:
+- How work the throwin Application-specific Errors with Service in Angular 13+?
