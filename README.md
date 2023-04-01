@@ -414,7 +414,7 @@ When Angular sees this leading asterisk with structural directives, it's going t
 
 
 ## Doubts:
-- How work the throwin Application-specific Errors with Service in Angular 13+?
+- How work the throw in Application-specific Errors with Service in Angular 13+?
 In Angular 4 is like:
 Service file
 ```
@@ -447,3 +447,5 @@ deletePost(post) {
     )
 }
 ```
+
+How use a global Error handling in Angular13+.

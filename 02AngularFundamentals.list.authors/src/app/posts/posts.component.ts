@@ -23,8 +23,7 @@ export class PostsComponent implements OnInit {
         this.posts = response;
       },
       error: (err: any) => {
-        console.log(err);
-        alert('An unexpected error occurred.');
+        this.handleError;
       }
     });
   }
@@ -42,29 +41,23 @@ export class PostsComponent implements OnInit {
         console.log(response);
       }, 
       error: (err: Response) => {
-        if(err.status === 400)
-          //this.form.setErrors(err.json());
-          console.log("400 to create a post");
-        else{
-          alert('An unexpected error occured.');
-        }
-        console.log(err);
+        this.handleError;
       }
     });
   }
 
   updatePost(post: any) {
+    //this.http.put(this.url, JSON.stringify(post));
     this.service.updatePost(post.id)
     .subscribe({
       next: response => {
         console.log(response)
       }, 
       error: err => {
-        console.log(err);
-        alert('An unexpected error occured.');
+        this.handleError;
       }
     });
-    //this.http.put(this.url, JSON.stringify(post));
+    
   }
 
 
@@ -78,13 +71,19 @@ export class PostsComponent implements OnInit {
         }
       }, 
       error: (err: Response) => {
-        // it's possible receive an unexist id
-        if(err.status === 404)
-          alert('This post has already been deleted.')
-        else {
-          alert('An unexpected error occured.');
-        }
+        this.handleError;
       }
     });
   }
+
+  private handleError(error: Response){
+    if(error.status === 404)
+      alert('This post has already been deleted.')
+    else if(error.status === 400)
+          console.log("Bad Input");
+    else {
+      alert('An unexpected error occured.');
+    }
+  }
+
 }
