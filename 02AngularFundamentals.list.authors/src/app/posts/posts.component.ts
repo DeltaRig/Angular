@@ -84,7 +84,6 @@ export class PostsComponent implements OnInit {
         else {
           alert('An unexpected error occured.');
         }
-        console.log(err);
       }
     });
   }
