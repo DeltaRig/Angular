@@ -411,3 +411,39 @@ When Angular sees this leading asterisk with structural directives, it's going t
 
 - [The Complete Angular Course: Beginner to Advanced](udemy.com/course/the-complete-angular-master-class) adapting to version 13
 - [Angular Documentation](https://angular.io/)
+
+
+## Doubts:
+- How work the throwin Application-specific Errors with Service in Angular 13+?
+In Angular 4 is like:
+Service file
+```
+deletePost(id: any){
+return this.http.delete(this.url + '/' + id)
+    .catch((error: Response) => {
+        if(error.status === 404)
+            return Observable.throw(new NotFoundError());
+        return Observable.throw(new AppError(error));
+    });
+}
+```
+
+and in the component file
+```
+deletePost(post) {
+    this.service.deletePost(post.id)
+    .subscribe(
+        response => {
+            let index = this.posts.indexOf(post);
+        },
+        (error: AppError) => {
+            if (error instanceof NotFoundError)
+                alert('This post has already been deleted.');
+            else {
+                alert('An unexpected error occurred.');
+                console.log(error);
+            }
+        }
+    )
+}
+```

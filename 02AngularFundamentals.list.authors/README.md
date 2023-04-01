@@ -46,5 +46,4 @@ I create a component to favorite.
 I create title-casing.pipe.ts and the component title-casing to check the result.
 
 
-## Doubts:
-- How work the throwin Application-specific Errors with Service in Angular 13+?
+
