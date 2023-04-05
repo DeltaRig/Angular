@@ -392,6 +392,11 @@ _How to handle expected errors:_ inside the error it's possible set something sp
 - AfterContentInit
 - ...
 
+#### Observables vs Promisses
+
+- Observables allow reactive programming and provide a bunch of useful operators. In Observable are more lazy because don't do anything until you subscribe to them;
+- Promises are more eagers is deprecated;
+
 ### Other notes
 
 - *What is the difference between DOM(Document Object Model) and HTML*
