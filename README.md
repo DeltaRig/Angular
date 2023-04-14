@@ -7,6 +7,12 @@ Versions used in this project:
 Angular CLI: 13.3.10       
 Node: 16.17.0
 
+| Angular version  | Project Folder |
+| ------------- | ------------- |
+| Angular CLI: 13.3.10    | 02AngularFundamentals.list.authors  |
+| Angular CLI: 15  | 03Router  |
+
+
 Install node js, and install Angular CLI with the command bellow:
 
 > npm install -g @angular/cli
@@ -396,6 +402,21 @@ _How to handle expected errors:_ inside the error it's possible set something sp
 
 - Observables allow reactive programming and provide a bunch of useful operators. In Observable are more lazy because don't do anything until you subscribe to them;
 - Promises are more eagers is deprecated;
+
+### Routing and Navigation
+Depth details in this [readme](./03Router)
+
+- Configure routes
+- RouterLinker
+
+> <a routerLink="/followers">
+
+And if you want pass a paramether with the route:
+> <a [routerLink]="['followers', follower,id]">
+
+routerLinkActive
+
+#### Single Page Applications (SPA)
 
 ### Other notes
 
