@@ -10,12 +10,15 @@ application.
 
 
 ### Advantages and Downsides
+A single page application is super-simple to deploy if compared to more traditional server-side rendered applications: it's really just one index.html file, with a CSS bundle and a Javascript bundle.
 
+The main advanteges is better user experience and an improvement in perceived performance.
 
-## What is the Angular Router?
-- Routes
-- Paths
-- Outlets
+## routerLink Directive
+
+> <a routerLink="">Home</a>
+> <a routerLink="courses">Courses</a>
+> <a [routerLink]="['lessons']">Lessons</a>
 
 - routerLink
 - routLink Active Directives
