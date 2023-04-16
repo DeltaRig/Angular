@@ -30,9 +30,23 @@ The main advanteges is better user experience and an improvement in perceived pe
 <a [routerLink]="['lessons']">Lessons</a>
 ```
 
-
-
 ## Angular Router Essentials
 
+The Angular router has great support for lazy loaded modules. In app-routing.module.ts we have something like this:
 
-## Angular Router Essentials
+```
+const routes: Routes = [
+    {
+        path: "courses",
+        loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule)
+    },
+    {
+        path: "login",
+        component: LoginComponent
+    }
+];
+```
+
+## Reference:
+
+- [Angular Router In Depth (Angular 15)](https://www.udemy.com/course/angular-router-course/)
