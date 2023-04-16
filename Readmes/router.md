@@ -16,12 +16,21 @@ The main advanteges is better user experience and an improvement in perceived pe
 
 ## routerLink Directive
 
-> <a routerLink="">Home</a>
-> <a routerLink="courses">Courses</a>
-> <a [routerLink]="['lessons']">Lessons</a>
+- routerLink (have some equivalent ways)
+```
+<a routerLink="">Home</a>
+<a routerLink="courses">Courses</a>
+<a [routerLink]="['lessons']">Lessons</a>
+```
 
-- routerLink
-- routLink Active Directives
+- routLink Active Directives informing which page is active:
+```
+<a routerLink="" routerLinkActive="menu-item-active">Home</a>
+<a routerLink="courses" routerLinkActive="menu-item-active">Courses</a>
+<a [routerLink]="['lessons']">Lessons</a>
+```
+
+
 
 ## Angular Router Essentials
 
