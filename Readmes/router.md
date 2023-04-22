@@ -47,6 +47,21 @@ const routes: Routes = [
 ];
 ```
 
+If you want add a NotFound page, it should be the last route because the Path "**" will correspond to anything.
+
+![plot](./images/03.404.png)
+
+And to make a redirect to other page, you can follow the example bellow that go from "" (home) to "/courses"
+
+```
+{
+    path: "",
+    redirectTo: "/courses",
+    pathMatch: "full"
+}
+```
+
+
 ## Reference:
 
 - [Angular Router In Depth (Angular 15)](https://www.udemy.com/course/angular-router-course/)
