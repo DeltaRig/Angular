@@ -61,6 +61,60 @@ And to make a redirect to other page, you can follow the example bellow that go 
 }
 ```
 
+*Linkable pages in single page application*: It means see a page by ID of component or something like that. 
+
+- You can add a new service and HTTP based injected service in the constructor and use it to featch the page, but in this case if the user but by HTTP a information that mismatch will go to a broken page. 
+- SOLUTION: To avoid this have a solution passing the full component in like "component: CourseComponent" and to it works we add component.resolve.ts like in "03Router\src\app\courses\services\course.resolve.ts" where we have the code bellow and it communique with the component service, it permits the application keep in the Courses page if mismatch the information. And add the component.resolve.ts in provide list of component-routing.module.ts.
+
+course.resolve.ts:
+```
+export class CourseResolver implements Resolve<Course> {
+    constructor(private courses: CoursesService) {
+
+    }
+
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
+        Observable<Course> {
+
+        const courseUrl = route.paramMap.get("courseUrl");
+
+        return this.courses.loadCourseByUrl(courseUrl);
+    }
+}
+```
+
+Method in CourseService:
+```
+loadCourseByUrl(courseUrl:string) {
+    return this.http.get<Course>(`/api/courses/${courseUrl}`)
+        .pipe(
+            shareReplay()
+        );
+}
+```
+
+couses-routing.module.ts
+```
+{
+    path:":courseUrl",
+    component: CourseComponent,
+    resolve: {
+        CourseResolver
+    }
+}
+```
+
+app-routing.module.ts
+```
+{
+    path: "courses",
+    loadChildren: () => import('./courses/courses.module')
+                        .then(m => m.CoursesModule),
+    data: {
+        preload: false
+    }
+},
+```
 
 ## Reference:
 
