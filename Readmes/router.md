@@ -120,6 +120,8 @@ app-routing.module.ts
 
 - router-outlet in HTML means that this screen makes up for the skeleton of the application.
 
+### Route Child Routes
+
 - The routes on our component routing configuration might also themselves have their own set child routes. Like in the example bellow, that each course will have lessons. And to show the LeassonsList component for the course.
 
 ```
