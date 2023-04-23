@@ -116,6 +116,39 @@ app-routing.module.ts
 },
 ```
 
+## Navigation
+
+- router-outlet in HTML means that this screen makes up for the skeleton of the application.
+
+- The routes on our component routing configuration might also themselves have their own set child routes. Like in the example bellow, that each course will have lessons. And to show the LeassonsList component for the course.
+
+```
+{
+    path:":courseUrl",
+    component: CourseComponent,
+    children: [
+        {
+            path: "",
+            component: LessonsListComponent,
+            resolve: {
+                lessons: LessonsResolver
+            }
+        },
+        {
+            path: "lessons/:lessonSeqNo",
+            component: LessonDetailComponent,
+            resolve: {
+                lesson: LessonDetailResolver
+            }
+        }
+    ],
+    resolve: {
+        course: CourseResolver
+    }
+}
+```
+
+
 ## Reference:
 
 - [Angular Router In Depth (Angular 15)](https://www.udemy.com/course/angular-router-course/)
