@@ -150,6 +150,22 @@ app-routing.module.ts
 }
 ```
 
+### Router Snapshots VS Route Observables
+
+## Router Guards in Depth
+
+### Authentication Store
+### Authentication Guards
+### CanActivateChild
+### CanDeactivate 
+### CanLoad
+
+## What is an Angular Router Preloaging Strategy?
+## Angular Router - Query Parameters
+## Configuring routing behaviour with routerLinkActiveOptions
+## Router Secondary Outlets
+## enableTracing and useHash
+## Recommended Settings
 
 ## Reference:
 
