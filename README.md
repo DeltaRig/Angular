@@ -64,6 +64,21 @@ To install all project dependencies (in package.json)
 
 - By default all properties of components are only accessible inside these components, not from outside and that generally is a good thing.
 
+#### Encapsulation
+
+Style encapsulation refers to how CSS styles are applied and isolated within a specific component without affecting other components in the application.
+
+By default is applied:
+> encapsulation: ViewEncapsulation.Emulated
+
+*Emulated:* It is the default style encapsulation in Angular. With this option, Angular emulates the scope of styles defined in a component by encapsulating them within a unique attribute automatically generated. This ensures that the styles defined in a component do not affect other components, and vice versa. Emulated encapsulation is the most commonly used option as it is the default.
+
+*None:* With this option, no style encapsulation is applied. This means that the styles defined in a component will be applied globally throughout the application. The use of "None" encapsulation should be avoided in most cases as it can lead to style conflicts and make maintenance difficult.
+
+*ShadowDom:* This option utilizes the Shadow DOM technology, which is a part of modern browsers, to encapsulate the styles of a component. Shadow DOM allows for real encapsulation of styles, making them inaccessible to other components. However, support for Shadow DOM may vary among browsers and may require additional configurations.
+
+By default, the styles defined in the app.component.css file will be applied to the root component (AppComponent) and all child components within the component hierarchy. This occurs because the default style encapsulation in Angular is emulated encapsulation (ViewEncapsulation.Emulated). However, it's important to note that styles defined in a child component can override styles defined in the parent component.
+
 #### Binding
 
 Default format is like:
