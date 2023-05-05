@@ -60,6 +60,10 @@ To install all project dependencies (in package.json)
 
 > npm install
 
+#### Components curiosities
+
+- By default all properties of components are only accessible inside these components, not from outside and that generally is a good thing.
+
 #### Binding
 
 Default format is like:
