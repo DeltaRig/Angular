@@ -99,6 +99,8 @@ One option to receive values in a form is importing FormsModule in app.module.ts
 
 if you have the attribute in class Component and the method that will receive the new value when the action happen, in this case keyup.enter.
 
+In case you're hitting an error, make sure you have FormsModule added to your imports[] in the AppModule.
+
 #### Pipes
 
 And a exemple of pipes and a custom pipe in course and the custum pipe is summary.pipe.ts in the folder 02* .
