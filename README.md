@@ -127,9 +127,11 @@ ng-content is used to display children in a template, ng-container is used as a 
 
 ### Directives
 
-Structural: Modify the structure of the DOM
-
-Attribute: Modify the attributes of the DOM elements
+| Attribute Directives  | Structural Directives |
+| ------------- | ------------- |
+| Modify the structure of the DOM | Modify the attributes of the DOM elements |
+| Look like a normal HTML Attribute (possibly with databinding or event binding)    | Look like a normal HTML Attribute but have a leading * (for desugaring)  |
+| Only affect/change the element they are added to  | Affect a whole area in the DOM (elements get added/removed)  |
 
 #### ngIf
 Works like a common if but for div or other
