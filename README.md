@@ -64,6 +64,16 @@ To install all project dependencies (in package.json)
 
 - By default all properties of components are only accessible inside these components, not from outside and that generally is a good thing.
 
+*Lifecycle:*
+- _ngOnChanges_: Called after a bound input property changes
+- _ngOnInit_: Called once the component is initialized
+- _ngDoCheck_: Called during every change detection run
+- _ngAfterContentInit_: Called after content (ng-content) has been projected into view
+- _ngAfterContentChecked_: Called every time the projected content has been checked
+- _ngAfterViweInit_: Called after the component's view (and child views) has been initialized
+- _ngAfterViewChecked_: Called every time the view (and child views) have been checked
+- _ngOnDetroy_: Called once the component is about to be destroyed
+
 #### Encapsulation
 
 Style encapsulation refers to how CSS styles are applied and isolated within a specific component without affecting other components in the application.
@@ -455,6 +465,7 @@ When Angular sees this leading asterisk with structural directives, it's going t
 #### References:
 
 - [The Complete Angular Course: Beginner to Advanced](udemy.com/course/the-complete-angular-master-class) adapting to version 13
+- [Angular - The Complete Guide (2023 Edition)](udemy.com/course/the-complete-guide-to-angular-2/)
 - [Angular Documentation](https://angular.io/)
 
 
