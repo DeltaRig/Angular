@@ -109,6 +109,8 @@ One option to receive values in a form is importing FormsModule in app.module.ts
 
 if you have the attribute in class Component and the method that will receive the new value when the action happen, in this case keyup.enter.
 
+In case you're hitting an error, make sure you have FormsModule added to your imports[] in the AppModule.
+
 #### Pipes
 
 And a exemple of pipes and a custom pipe in course and the custum pipe is summary.pipe.ts in the folder 02* .
@@ -135,9 +137,11 @@ ng-content is used to display children in a template, ng-container is used as a 
 
 ### Directives
 
-Structural: Modify the structure of the DOM
-
-Attribute: Modify the attributes of the DOM elements
+| Attribute Directives  | Structural Directives |
+| ------------- | ------------- |
+| Modify the structure of the DOM | Modify the attributes of the DOM elements |
+| Look like a normal HTML Attribute (possibly with databinding or event binding)    | Look like a normal HTML Attribute but have a leading * (for desugaring)  |
+| Only affect/change the element they are added to  | Affect a whole area in the DOM (elements get added/removed)  |
 
 #### ngIf
 Works like a common if but for div or other
