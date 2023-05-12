@@ -60,7 +60,7 @@ To install all project dependencies (in package.json)
 
 > npm install
 
-#### Components curiosities
+### Components curiosities
 
 - By default all properties of components are only accessible inside these components, not from outside and that generally is a good thing.
 
@@ -89,7 +89,7 @@ By default is applied:
 
 By default, the styles defined in the app.component.css file will be applied to the root component (AppComponent) and all child components within the component hierarchy. This occurs because the default style encapsulation in Angular is emulated encapsulation (ViewEncapsulation.Emulated). However, it's important to note that styles defined in a child component can override styles defined in the parent component.
 
-#### Binding
+### Binding
 
 Default format is like:
 
@@ -253,6 +253,36 @@ it will create 2 files and modify app.module.ts
 The ngModel directive binds the value of the input element to a property on the component. This means that any changes made to the input element are automatically reflected in the component property, and vice versa.
 
 If the component property is updated programmatically, such as by calling a method or receiving data from an API, the ngModel directive updates the value of the input element to reflect the new value of the property.
+
+### Services
+
+![What are services?](WhatAreServices.png)
+
+It's possible injecting LoggingService like this:
+
+```
+@Component(...)
+export class AccountComponent {
+  // @Input() & @Output() code as shown in the previous lecture
+ 
+  constructor(private loggingService: LoggingService) {}
+}
+```
+Or inject it like this, by using the inject() function:
+
+```
+import { Component, Input, Output, inject } from '@angular/core'; // <- Add inject import
+ 
+@Component(...)
+export class AccountComponent {
+  // @Input() & @Output() code as shown in the previous lecture
+  private loggingService?: LoggingService; // <- must be added
+ 
+  constructor() {
+    this.loggingService = inject(LoggingService);
+  }
+}
+```
 
 #### Specific validation errors for forms
 
