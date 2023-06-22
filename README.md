@@ -466,6 +466,23 @@ _How to handle expected errors:_ inside the error it's possible set something sp
 - Observables allow reactive programming and provide a bunch of useful operators. In Observable are more lazy because don't do anything until you subscribe to them;
 - Promises are more eagers is deprecated;
 
+### Understanding Observables
+
+#### Install RxJS
+In order to follow along smoothly with the course examples, make sure you install RxJS v6 by running
+
+> npm install --save rxjs@6
+
+In addition, also install the rxjs-compat package:
+
+> npm install --save rxjs-compat
+
+Official Docs: https://rxjs-dev.firebaseapp.com/
+
+RxJS Series: https://academind.com/learn/javascript/understanding-rxjs/
+
+Updating to RxJS 6: https://academind.com/learn/javascript/rxjs-6-what-changed/
+
 ### Routing and Navigation
 Depth details in this [readme](./03Router)
 
