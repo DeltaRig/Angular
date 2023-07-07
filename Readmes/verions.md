@@ -29,6 +29,43 @@ If you DON'T access the selected element in ngOnInit (but anywhere else in your 
 
 If you're using Angular 9+, you only need to add { static: true } (if needed) but not { static: false }.
 
+### Fixing a Bug
+When we add some code to access the controls of our form array:
+
+> *ngFor="let hobbyControl of signupForm.get('hobbies').controls; let i = index"
+
+This code will fail as of the latest Angular version.
+
+You can fix it easily though. Outsource the "get the controls" logic into a method of your component code (the .ts file):
+
+```
+getControls() {
+  return (<FormArray>this.signupForm.get('hobbies')).controls;
+}
+```
+
+In the template, you can then use:
+
+```
+*ngFor="let hobbyControl of getControls(); let i = index"
+```
+
+Alternatively, you can set up a getter and use an alternative type casting syntax:
+
+```
+get controls() {
+  return (this.signupForm.get('hobbies') as FormArray).controls;
+}
+```
+
+and then in the template:
+
+```
+*ngFor="let hobbyControl of controls; let i = index"
+```
+
+This adjustment is required due to the way TS works and Angular parses your templates (it doesn't understand TS there).
+
 #### References:
 
 - [Angular: Maintainng Applications](https://www.linkedin.com/learning/angular-maintaining-applications)
