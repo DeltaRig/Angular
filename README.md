@@ -115,6 +115,8 @@ In case you're hitting an error, make sure you have FormsModule added to your im
 
 And a exemple of pipes and a custom pipe in course and the custum pipe is common>summary.pipe.ts in the folder 02* .
 
+- PipeTransform needs the transform() method
+
 #### ng-content
 
 <ng-content> is used to create configurable components. To indicate which selector will be used when the data is injected:
