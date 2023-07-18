@@ -113,7 +113,7 @@ In case you're hitting an error, make sure you have FormsModule added to your im
 
 #### Pipes
 
-And a exemple of pipes and a custom pipe in course and the custum pipe is summary.pipe.ts in the folder 02* .
+And a exemple of pipes and a custom pipe in course and the custum pipe is common>summary.pipe.ts in the folder 02* .
 
 #### ng-content
 
@@ -496,7 +496,7 @@ And if you want pass a paramether with the route:
 
 routerLinkActive
 
-#### Single Page Applications (SPA)
+
 
 ### Other notes
 
