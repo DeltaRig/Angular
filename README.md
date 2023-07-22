@@ -486,7 +486,7 @@ RxJS Series: https://academind.com/learn/javascript/understanding-rxjs/
 Updating to RxJS 6: https://academind.com/learn/javascript/rxjs-6-what-changed/
 
 ### Routing and Navigation
-Depth details in this [readme](./03Router)
+Depth details in this [readme](./Readmes/router.md)
 
 - Configure routes
 - RouterLinker
@@ -498,6 +498,8 @@ And if you want pass a paramether with the route:
 
 routerLinkActive
 
+### HTTP 
+Depth details in this [readme](./Readmes/http.md)
 
 
 ### Other notes
