@@ -1,6 +1,9 @@
 # Making HTTP Requests
 
-#### 
+- Subscribe the request is essential:
+
+To send a http request you need do
+``` this.http.<command>('<url>', <var to receive the return>).subscribe ```
 
 
 #### Helpfull Links
